@@ -6,13 +6,8 @@
 </h1>
 <ul>
     {% for page in section.pages %}
-        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-        {% if page.taxonomies.tags %}
-            Tags :
-            {% for tag in page.taxonomies.tags %}
-                {{ tag }}
-            {% endfor %}
-        {% endif %}
+    <li>{{ macros::post_header(page=page) }}</li>
+    </br>
   {% endfor %}
 </ul>
 {% endblock content %}

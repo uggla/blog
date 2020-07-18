@@ -1,15 +1,15 @@
-{% macro post_header(page, excerpt=false) %}
-    <header class="post-header">
-        <h1 class="post-header__title">
+{% macro post_header(page, excerpt=false, page_title=false) %}
+    <!-- <header class="post-header"> -->
+    <h1 class="post-header__title{% if page_title %} title{% endif %}">
             <a href="{{ page.permalink }}">
                 {{ page.title }}
             </a>
         </h1>
         <p class="post-header__info">
             {% if page.date %}
-                <a class="post-header__timestamp" href="{{ page.permalink }}">
+                <a class="post-header__timestamp{% if page_title %} subtitle{% endif %}" href="{{ page.permalink }}">
                     <time datetime="{{ page.date }}">
-                        {{ page.date | date(format="%B %e, %Y") }}
+                      {{ page.date | date(format="%Y-%m-%d %H:%M", timezone="Europe/Paris") }}
                     </time>
                 </a>
             {% endif %}
@@ -26,5 +26,5 @@
                 <a href="{{ page.permalink }}">more</a>
             </p>
         {% endif %}
-    </header>
+    <!-- </header> -->
 {% endmacro post_header %}
