@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@import "variables";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    color: $base-color;
+    font-family: $base-font;
+    font-size: $base-size;
+    line-height: $base-line-height;
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+// h1, h2, h3, h4, h5, h6 {
+//     line-height: $header-line-height;
+// }
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+code {
+    background-color: #F0F0F0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $content-width;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}

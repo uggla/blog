@@ -1,6 +1,9 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block content %}
+    <h1 class="title">
+        Liste des articles pour le tag {{ term.name }}
+    </h1>
     {% for page in term.pages %}
         {{ macros::post_header(page=page, excerpt=true) }}
         <br/>

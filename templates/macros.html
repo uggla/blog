@@ -1,10 +1,10 @@
 {% macro post_header(page, excerpt=false, page_title=false) %}
     <!-- <header class="post-header"> -->
-    <h1 class="post-header__title{% if page_title %} title{% endif %}">
+        {% if page_title %}<h1 class="post-header__title title">{% endif %}
             <a href="{{ page.permalink }}">
                 {{ page.title }}
             </a>
-        </h1>
+            {% if page_title %}</h1>{% endif %}
         <p class="post-header__info">
             {% if page.date %}
                 <a class="post-header__timestamp{% if page_title %} subtitle{% endif %}" href="{{ page.permalink }}">

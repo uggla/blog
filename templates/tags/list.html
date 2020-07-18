@@ -1,6 +1,9 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block content %}
+    <h1 class="title">
+        Liste des tags
+    </h1>
     {% for tag in terms %}
         <header class="post-header">
             <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
