@@ -6,8 +6,9 @@
 </h1>
 <ul>
     {% for page in section.pages %}
-    <li>{{ macros::post_header(page=page) }}</li>
-    </br>
+    <div class="post">
+        <li>{{ macros::post_header(page=page) }}</li>
+    </div>
   {% endfor %}
 </ul>
 {% endblock content %}

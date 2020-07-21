@@ -5,7 +5,8 @@
         Liste des articles pour le tag {{ term.name }}
     </h1>
     {% for page in term.pages %}
+    <div class="post">
         {{ macros::post_header(page=page, excerpt=true) }}
-        <br/>
+    </div>
     {% endfor %}
 {% endblock content %}

@@ -2,6 +2,5 @@
 
 {% block content %}
 {{ macros::post_header(page=page, page_title=true) }}
-<br/>
-<p>{{ page.content | safe }}</p>
+<p class="content">{{ page.content | safe }}</p>
 {% endblock content %}
