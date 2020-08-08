@@ -7,6 +7,10 @@
   <title>Le blog de Uggla</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
+ {% block rss %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+ {% endblock %}
+
 </head>
 
 <body>
