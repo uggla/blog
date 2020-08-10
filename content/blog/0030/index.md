@@ -11,7 +11,7 @@ Il est possible d'ajouter la découverte automatique d'un flux de donnée. Cela 
 Par exemple dans mon cas, j'utilise l'extension [Livemarks](https://addons.mozilla.org/en-US/firefox/addon/livemarks/?src=search) pour [Firefox](https://fr.wikipedia.org/wiki/Mozilla_Firefox) et quand je vais sur les pages d'un blog contenant un flux de donnée, alors une petite icône m'indique la présence de celui-ci.
 ![RSS feed.](rss_feed.png)
 
-La mise en place de cette découverte automatique est très simple, il suffit d'ajouter le code html suivant entre les balises `<header>` de la page html.
+La mise en place de cette découverte automatique est très simple, il suffit d'ajouter le code html suivant entre les balises `<head>` de la page html.
 ```html
 <link rel="alternate" type="application/rss+xml"
   title="Flux RSS"
