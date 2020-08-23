@@ -22,5 +22,16 @@ taxonomies = [
     {name = "tags", feed = true},
 ]
 
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [
+    "https://www.linkedin.com",
+]
+
+# Skip anchor checking for external URLs that start with these prefixes
+# skip_anchor_prefixes = [
+#     "https://caniuse.com/",
+# ]
+
 [extra]
 # Put all your custom variables here
