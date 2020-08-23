@@ -4,4 +4,8 @@ IFS=$'\n\t'
 
 zola check
 zola build
-scp -P 2200 -r public/* uggla@uggla.fr:blog
+rsync -avx \
+  --progress \
+  --delete \
+  -e 'ssh -p 2200' \
+  public/ uggla@uggla.fr:blog/
